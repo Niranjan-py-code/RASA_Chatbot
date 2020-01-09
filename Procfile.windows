@@ -1,0 +1,1 @@
+web: rasa run -m rasa_sample/models --enable-api --cors "*"
