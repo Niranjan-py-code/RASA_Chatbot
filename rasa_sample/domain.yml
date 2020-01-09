@@ -1,0 +1,102 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- name
+- thanks
+- position
+- greet+position
+- give_email
+- give_tel
+- task
+
+entities:
+- role_type
+- PERSON
+- tel
+- email
+- positions
+
+slots:
+  PERSON:
+    type: text
+  tel:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  positions:
+    type: list
+  role_type:
+    type: categorical
+    values:
+      - technical
+      - business
+      - any
+
+templates:
+  utter_greet:
+    - text: Hey ! How are you today?
+  utter_cheer_up:
+    - text: Here is something to cheer you up
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+    - text: good to hear, carry on!
+    - text: happy to hear, carry on!
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_intro:
+    - text: I am Rasa, interactive chatbot.
+    - text: I am Rasa, interactice bot.
+  utter_simple_greet:
+    - text: Hello!
+  utter_utilities:
+    - text: Hi {PERSON}, how can I help you?
+  utter_role:
+    - text: Are you looking for technical or business role?
+  utter_knowmore:
+    - text: Do you want more help?
+  utter_nothanks:
+    - text: Nice chatting with you, Bye
+  utter_goodbye:
+    - text: Happy to have helped you!
+  utter_name:
+    - text: May i know your name?
+  utter_email:
+    - text: What's your email address?
+    - text: Mention your email address
+  utter_mobile:
+    - text: What's your contact number?
+  utter_task:
+    - text: I can help you find openings in Compugain.
+  utter_thanks:
+    - text: Thank you
+  utter_getback:
+    - text: We'll get back to you when positions for Business are open. Thank you!
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_intro
+- utter_name
+- utter_simple_greet
+- utter_email
+- utter_mobile
+- utter_utilities
+- utter_role
+- utter_knowmore
+- utter_nothanks
+- utter_task
+- action_check_positions
+- utter_getback
+- utter_thanks
