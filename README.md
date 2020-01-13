@@ -26,5 +26,42 @@ Sample chatbot created using RASA_core, rasa_NLU and RasaX.
 For step by step procedure to create and run a Rasa project follow the tutorial:
 https://rasa.com/docs/rasa/user-guide/rasa-tutorial/
 
+# Rasa Chatbot Components:
+
+## RASA NLU:(nlu.md)
+Rasa should understand user messages, and then train a model by showing it those examples.
+"## intent: <intent name>"
+
+## RASA stories:(stories.md)
+User inputs express in intents and entity
+'##' -  name of the story
+‘*’ – messages input by users, entity we can provide using {}
+‘-‘ – starts with ‘-‘. Two types of actions 1. Utterances 2. And custom actions.
+
+## RASA Domains:(domain.yml)
+A domain is very important part and defines the universe in which assistance operates.
+‘domain.yml’
+1.	intents – list of intents the assistance understand.
+2.	Entities -  how the user data.
+3.	Actions – list of all utterances and custom actions an assistance should use to response.
+4.	Templates – Actually responses the assistance gives to the user.
+
+## Configuration File:(config.yml)
+The configuration file defines the NLU and Core components that your model will use. In this example, your NLU model will use the supervised_embeddings pipeline. You can learn about the different NLU pipelines here.
+
+# Train Rasa Model:
+Anytime we add new NLU or Core data, or update the domain or configuration, we need to re-train a neural network on our example stories and NLU data. To do this, run the command below. This command will call the Rasa Core and NLU train functions and store the trained model into the models/ directory. The command will automatically only retrain the different model parts if something has changed in their data or configuration.
+
+*rasa train* - Train both rasa core and rasa nlu
+*rasa train nlu* - train onlu rasa nlu
+
+# Talk to your assitance:
+We can talk to the trained assitance in command promt or can connect to any UI.
+To run in command promt:
+*rasa shell*
+
+note: *rasa shell nlu* - It show how your bot understands the user inputs.
+
+
 
 
