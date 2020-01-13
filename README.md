@@ -62,6 +62,49 @@ To run in command promt:
 *rasa shell*
 
 **note: *rasa shell nlu* - It show how your bot understands the user inputs.**
+**note: *rasa visualize* - Creates a graph of the conversation flow.**
+**note: *rasa x* - opens up a GUI platform for deveoplment of the Rasa bot**
+
+# Run Chatbot from UI(webchat):
+
+- add below text in *credentials.yml* file.
+
+**socketio:
+  user_message_evt: user_uttered
+  bot_message_evt: bot_uttered
+  session_persistence: true**
+  
+- Use the below script file in your webpage:
+
+    <div id="webchat"/>
+  <script src="static/js/webchat-v0.7.8.js"></script>
+  <script>
+    WebChat.default.init({
+      selector: "#webchat",
+      interval: 1000, // 1000 ms between each message
+      customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+      socketUrl: "http://localhost:5005",
+      socketPath: "/socket.io/",
+      title: "Rasa Bot",
+      subtitle: "AI powered Conversational Bot",
+      inputTextFieldHint: "Type a message...",
+      connectingText: "Waiting for server...",
+      hideWhenNotConnected: true,
+      fullScreenMode: false,
+      profileAvatar: "static/icons/bot_open.png",
+      openLauncherImage: 'static/icons/bot_open.png',
+      closeLauncherImage: 'myCustomCloseImage.png',
+      params: {
+        images: {
+          dims: {
+            width: 600,
+            height: 600,
+          }
+        },
+        storage: "local"
+      }
+    })
+  </script>
 
 
 
