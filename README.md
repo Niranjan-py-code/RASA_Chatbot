@@ -57,12 +57,15 @@ Anytime we add new NLU or Core data, or update the domain or configuration, we n
 
 # Talk to your assitance:
 We can talk to the trained assitance in command promt or can connect to any UI.
+
 To run in command promt:
 
 *rasa shell*
 
 **note: *rasa shell nlu* - It show how your bot understands the user inputs.**
+
 **note: *rasa visualize* - Creates a graph of the conversation flow.**
+
 **note: *rasa x* - opens up a GUI platform for deveoplment of the Rasa bot**
 
 # Run Chatbot from UI(webchat):
@@ -76,7 +79,7 @@ To run in command promt:
   
 - Use the below script file in your webpage:
 
-    <div id="webchat"/>
+<div id="webchat"/>
   <script src="static/js/webchat-v0.7.8.js"></script>
   <script>
     WebChat.default.init({
