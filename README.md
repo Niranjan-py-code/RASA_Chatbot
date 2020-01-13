@@ -79,36 +79,32 @@ To run in command promt:
   
 - Use the below script file in your webpage:
 
-\<div id="webchat"/>
+\    <div id="webchat"/>
   <script src="static/js/webchat-v0.7.8.js"></script>
   <script>
-   WebChat.default.init({
-    selector: "#webchat",
-    interval: 1000, // 1000 ms between each message
-    customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-    socketUrl: "http://localhost:5005",
-    socketPath: "/socket.io/",
-    title: "Rasa Bot",
-    subtitle: "AI powered Conversational Bot",
-    inputTextFieldHint: "Type a message...",
-    connectingText: "Waiting for server...",
-    hideWhenNotConnected: true,
-    fullScreenMode: false,
-    profileAvatar: "static/icons/bot_open.png",
-    openLauncherImage: 'static/icons/bot_open.png',
-    closeLauncherImage: 'myCustomCloseImage.png',
-    params: {
-      images: {
-        dims: {
-          width: 600,
-          height: 600,
-        }
-      },
-      storage: "local"
-    }
+    WebChat.default.init({
+      selector: "#webchat",
+      interval: 1000, // 1000 ms between each message
+      customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+      socketUrl: "http://localhost:5005",
+      socketPath: "/socket.io/",
+      title: "Rasa Bot",
+      subtitle: "AI powered Conversational Bot",
+      inputTextFieldHint: "Type a message...",
+      connectingText: "Waiting for server...",
+      hideWhenNotConnected: true,
+      fullScreenMode: false,
+      profileAvatar: "static/icons/bot_open.png",
+      openLauncherImage: 'static/icons/bot_open.png',
+      closeLauncherImage: 'myCustomCloseImage.png',
+      params: {
+        images: {
+          dims: {
+            width: 600,
+            height: 600,
+          }
+        },
+        storage: "local"
+      }
     })
- </script>
-
-
-
-
+  </script>
