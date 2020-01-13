@@ -15,11 +15,11 @@ Sample chatbot created using RASA_core, rasa_NLU and RasaX.
 
 ## RASA Installation Guide:
 
--  Spacy : *pip install -U spacy 
+-  Spacy : * pip install -U spacy *
 
--  Spacy Large English language model : *python -m spacy download en_core_web_sm
+-  Spacy Large English language model : * python -m spacy download en_core_web_sm *
 
--  Link the model now: *python -m spacy link en_core_web_sm en
+-  Link the model now: *python -m spacy link en_core_web_sm en*
 
 -  RASA X installation : *pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 
