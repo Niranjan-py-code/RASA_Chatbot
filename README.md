@@ -79,7 +79,7 @@ To run in command promt:
   
 - Use the below script file in your webpage:
 
-<div id="webchat"/>
+\<div id="webchat"/>
   <script src="static/js/webchat-v0.7.8.js"></script>
   <script>
     WebChat.default.init({
@@ -107,7 +107,7 @@ To run in command promt:
         storage: "local"
       }
     })
-  </script>
+  </script>\
 
 
 
