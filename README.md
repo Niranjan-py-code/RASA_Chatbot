@@ -58,9 +58,10 @@ Anytime we add new NLU or Core data, or update the domain or configuration, we n
 # Talk to your assitance:
 We can talk to the trained assitance in command promt or can connect to any UI.
 To run in command promt:
+
 *rasa shell*
 
-note: *rasa shell nlu* - It show how your bot understands the user inputs.
+**note: *rasa shell nlu* - It show how your bot understands the user inputs.**
 
 
 
