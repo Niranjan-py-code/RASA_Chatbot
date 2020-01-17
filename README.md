@@ -108,3 +108,11 @@ To run in command promt:
       }
     })
   </script>
+  
+  ## Below are the commands I used for:
+To start custom action server:
+### python -m rasa_sdk --actions actions
+### python –m rasa_sdk.endpoint -–actions actions
+To start rasa server
+### rasa run -m models --enable-api --cors "*"
+
